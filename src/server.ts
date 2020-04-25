@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 import { Room, Player } from './models';
 
-const app = express();
+const app: any = express();
 
 app.set("port", process.env.PORT || 3001);
 
@@ -12,49 +12,49 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.post('/create', (req, res) => {
+app.post('/create', (req: any, res: any) => {
   res.send('POST request to the homepage');
 });
 
-app.get("/claims", (req, res) => {
+app.get("/claims", (req: any, res: any) => {
   res.send('GET request to the homepage');
 });
 
-app.get("/timeout", (req, res) => {
+app.get("/timeout", (req: any, res: any) => {
   res.send('GET request to the homepage');
 });
 
-app.post('/join', (req, res) => {
+app.post('/join', (req: any, res: any) => {
   res.send('POST request to the homepage');
 });
 
-app.post('/ready', (req, res) => {
+app.post('/ready', (req: any, res: any) => {
   res.send('POST request to the homepage');
 });
 
-app.get("/ready", (req, res) => {
+app.get("/ready", (req: any, res: any) => {
   // tslint:disable-next-line:no-console
   console.log("Ready called");
   res.send('GET request to the homepage');
 });
 
-app.post("/number", (req, res) => {
+app.post("/number", (req: any, res: any) => {
   res.send('GET request to the homepage');
 });
 
-app.post('/claim', (req, res) => {
+app.post('/claim', (req: any, res: any) => {
   res.send('POST request to the homepage');
 });
 
-app.get("/status", (req, res) => {
+app.get("/status", (req: any, res: any) => {
   res.send('GET request to the homepage');
 });
 
-app.get("/logs", (req, res) => {
+app.get("/logs", (req: any, res: any) => {
   res.send('GET request to the homepage');
 });
 
-app.get("/leaderboard", (req, res) => {
+app.get("/leaderboard", (req: any, res: any) => {
   res.send('GET request to the homepage');
 });
 
